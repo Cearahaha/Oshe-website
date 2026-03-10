@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Call · OSHE and HARM</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #00302b;
+    --teal: #00d4aa;
+    --teal-light: #00ffcc;
+    --white: #f5faf9;
+    --grey: #8aa8a2;
+    --harm-accent: #ff6b35;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--dark); color:var(--white); overflow-x:hidden; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
+  .nav-logo { display:flex; align-items:center; gap:0.8rem; text-decoration:none; }
+  .logo-text { font-family:'Space Mono',monospace; font-size:1.3rem; font-weight:700; letter-spacing:0.1em; }
+  .logo-text.o { color:var(--teal); }
+  .logo-text.h { color:var(--harm-accent); }
+  .nav-div { width:1px; height:24px; background:rgba(0,212,170,0.25); }
+  .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
+  .nav-links a { color:rgba(245,250,249,0.75); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--teal); }
+  .nav-cta { background:var(--teal); color:var(--dark)!important; padding:0.55rem 1.3rem; border-radius:6px; font-weight:700!important; }
+  .nav-cta:hover { background:var(--teal-light)!important; color:var(--dark)!important; }
+
+  /* PAGE */
+  .page { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:10rem 4rem 6rem; position:relative; overflow:hidden; }
+  .page-bg { position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,212,170,0.06) 0%,transparent 70%); }
+  .page > * { position:relative; z-index:1; }
+
+  .ptag { font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.22em; color:var(--teal); text-transform:uppercase; border:1px solid rgba(0,212,170,0.3); padding:0.38rem 1rem; border-radius:2px; margin-bottom:2rem; display:inline-block; animation:fadeUp 0.6s ease both; }
+  h1 { font-size:clamp(2.2rem,4.5vw,3.8rem); font-weight:700; line-height:1.1; max-width:680px; margin-bottom:1rem; animation:fadeUp 0.7s 0.1s ease both; }
+  h1 .accent { color:var(--teal); }
+  .sub { font-size:1rem; color:rgba(245,250,249,0.52); max-width:480px; line-height:1.8; font-weight:300; margin-bottom:3.5rem; animation:fadeUp 0.7s 0.2s ease both; }
+
+  /* CARDS */
+  .cards { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:800px; animation:fadeUp 0.7s 0.3s ease both; }
+  .card { border-radius:14px; padding:2.5rem; display:flex; flex-direction:column; gap:1.2rem; transition:transform 0.2s; }
+  .card:hover { transform:translateY(-4px); }
+  .card.teal { background:rgba(0,212,170,0.06); border:1px solid rgba(0,212,170,0.2); }
+  .card.harm { background:rgba(255,107,53,0.06); border:1px solid rgba(255,107,53,0.2); }
+  .card-tag { font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; }
+  .card.teal .card-tag { color:var(--teal); }
+  .card.harm .card-tag { color:var(--harm-accent); }
+  .card h3 { font-size:1.3rem; font-weight:700; line-height:1.2; }
+  .card p { font-size:0.88rem; color:rgba(245,250,249,0.52); line-height:1.7; font-weight:300; flex:1; }
+  .card-btn { display:inline-flex; align-items:center; justify-content:center; padding:0.85rem 1.6rem; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.93rem; font-weight:700; text-decoration:none; transition:all 0.2s; }
+  .card.teal .card-btn { background:var(--teal); color:var(--dark); }
+  .card.teal .card-btn:hover { background:var(--teal-light); }
+  .card.harm .card-btn { background:var(--harm-accent); color:#fff; }
+  .card.harm .card-btn:hover { background:#ff855a; }
+
+  /* FOOTER */
+  footer { background:#001a16; border-top:1px solid rgba(0,212,170,0.08); padding:2.8rem 4rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; }
+  .footer-logos { display:flex; align-items:center; gap:0.6rem; }
+  .footer-logos span { font-family:'Space Mono',monospace; font-weight:700; font-size:1rem; }
+  .fo { color:var(--teal); } .fh { color:var(--harm-accent); } .fsep { color:var(--grey); }
+  .ftag { font-family:'Space Mono',monospace; font-size:0.65rem; color:var(--grey); letter-spacing:0.1em; text-transform:uppercase; margin-top:0.3rem; }
+  .flinks { display:flex; gap:1.8rem; list-style:none; flex-wrap:wrap; }
+  .flinks a { color:var(--grey); text-decoration:none; font-size:0.82rem; transition:color 0.2s; }
+  .flinks a:hover { color:var(--teal); }
+  .fcopy { font-size:0.74rem; color:rgba(138,168,162,0.45); text-align:right; line-height:1.6; }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+
+  @media(max-width:900px) {
+    nav { padding:1rem 1.5rem; }
+    .nav-links { display:none; }
+    .page { padding:7rem 1.5rem 4rem; }
+    .cards { grid-template-columns:1fr; max-width:420px; }
+    footer { flex-direction:column; align-items:flex-start; padding:2.5rem 1.5rem; }
+    .fcopy { text-align:left; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="logo-text o">OSHE</span>
+    <div class="nav-div"></div>
+    <span class="logo-text h">HARM</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="oshe-features.html">OSHE Software</a></li>
+    <li><a href="harm-services.html">HARM Consulting</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="book.html" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-bg"></div>
+  <div class="ptag">Get Started</div>
+  <h1>Pick the call that<br><span class="accent">works for you.</span></h1>
+  <p class="sub">Whether you want to see the software in action or you are ready to get set up, we have a call for that.</p>
+
+  <div class="cards">
+    <div class="card teal">
+      <span class="card-tag">OSHE Software</span>
+      <h3>Book a Demo</h3>
+      <p>Want to see OSHE before you commit? We will walk you through the platform, answer your questions, and show you how it works for your type of organisation.</p>
+      <a href="https://calendly.com/oshenz" target="_blank" class="card-btn">Book a Demo</a>
+      <a href="book.html" class="card-btn" style="background:transparent;border:1px solid rgba(0,212,170,0.3);color:var(--teal);margin-top:-0.4rem;">Start Free Trial</a>
+    </div>
+    <div class="card teal">
+      <span class="card-tag">OSHE Software</span>
+      <h3>Onboarding Call</h3>
+      <p>Already tried the platform and ready to get set up properly? Jump on a call with the team and we will get everything configured and your people ready to go.</p>
+      <a href="https://calendly.com/oshenz" target="_blank" class="card-btn">Book Onboarding</a>
+    </div>
+    <div class="card harm" style="grid-column:1/-1;">
+      <span class="card-tag">HARM Consulting</span>
+      <h3>1:1 with Vanessa</h3>
+      <p>Need expert H&S advice? Book a focused session with Vanessa Crafts. Bring your challenges and walk away with a clear plan. No sales pitch.</p>
+      <a href="https://calendly.com/oshenz" target="_blank" class="card-btn">Book with Vanessa</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logos">
+      <span class="fo">OSHE</span>
+      <span class="fsep">&amp;</span>
+      <span class="fh">HARM</span>
+    </div>
+    <div class="ftag">Empower Safety. Elevate Efficiency.</div>
+  </div>
+  <ul class="flinks">
+    <li><a href="oshe-features.html">OSHE Software</a></li>
+    <li><a href="harm-services.html">HARM Consulting</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="book.html">Book a Demo</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+  <div style="display:flex;flex-direction:column;gap:0.35rem;">
+    <a href="tel:0508664276" style="color:var(--grey);text-decoration:none;font-size:0.82rem;">0508 664 276</a>
+    <a href="mailto:info@oshe.co.nz" style="color:var(--grey);text-decoration:none;font-size:0.82rem;">info@oshe.co.nz</a>
+    <span style="font-size:0.78rem;color:rgba(138,168,162,0.4);">24/32 Turiwhatu St, Papamoa, Tauranga</span>
+  </div>
+  <div class="fcopy">
+    © 2026 OSHE and HARM. New Zealand.<br>
+    <span style="opacity:0.5;">oshe.co.nz · harm.co.nz</span>
+  </div>
+</footer>
+
+</body>
+</html>
