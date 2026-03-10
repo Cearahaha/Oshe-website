@@ -20,10 +20,9 @@
 
   /* NAV */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
-  .nav-logo { display:flex; align-items:center; gap:0.8rem; text-decoration:none; }
-  .logo-text { font-family:'Space Mono',monospace; font-size:1.3rem; font-weight:700; letter-spacing:0.1em; }
-  .logo-text.o { color:var(--teal); }
-  .logo-text.h { color:var(--harm-accent); }
+  .nav-logo { display:flex; align-items:center; gap:1rem; text-decoration:none; }
+  .nav-logo img { height:32px; width:auto; }
+  .nav-logo .harm-logo { height:28px; filter:invert(55%) sepia(80%) saturate(600%) hue-rotate(340deg) brightness(105%); }
   .nav-div { width:1px; height:24px; background:rgba(0,212,170,0.25); }
   .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
   .nav-links a { color:rgba(245,250,249,0.75); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
@@ -85,9 +84,9 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <span class="logo-text o">OSHE</span>
+    <img src="https://i.imgur.com/YdtxtOQ.png" alt="OSHE">
     <div class="nav-div"></div>
-    <span class="logo-text h">HARM</span>
+    <img src="https://i.imgur.com/Ziv1cNE.png" alt="HARM" class="harm-logo">
   </a>
   <ul class="nav-links">
     <li><a href="oshe-features.html">OSHE Software</a></li>
