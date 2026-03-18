@@ -12,16 +12,17 @@
     --teal-light: #00ffcc;
     --white: #f5faf9;
     --grey: #8aa8a2;
-    --harm-accent: #ff6b35;
+    --harm-accent: #2e37fe;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'DM Sans',sans-serif; background:var(--dark); color:var(--white); overflow-x:hidden; }
 
-  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.5rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
   .nav-logo { display:flex; align-items:center; gap:1rem; text-decoration:none; }
-  .nav-logo img { height:32px; width:auto; }
-  .nav-logo .harm-logo { height:28px; filter:invert(55%) sepia(80%) saturate(600%) hue-rotate(340deg) brightness(105%); }
-  .nav-div { width:1px; height:24px; background:rgba(0,212,170,0.25); }
+  .nav-logo img { height:84px; width:auto; }
+  .nav-logo .harm-logo { height:76px; }
+  .nav-logo .oshe-logo { }
+  .nav-div { width:1px; height:56px; background:rgba(0,212,170,0.25); }
   .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
   .nav-links a { color:rgba(245,250,249,0.75); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
   .nav-links a:hover { color:var(--teal); }
@@ -51,6 +52,9 @@
 
   @media(max-width:900px) {
     nav { padding:1rem 1.5rem; }
+    .nav-logo img { height:48px; }
+    .nav-logo .harm-logo { height:42px; }
+    .nav-div { height:36px; }
     .nav-links { display:none; }
     .page { padding:7rem 1.5rem 4rem; }
     footer { flex-direction:column; align-items:flex-start; padding:2.5rem 1.5rem; }
@@ -62,9 +66,9 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="https://images/oshe-logo.png" alt="OSHE">
+    <img src="images/oshe-logo.png" alt="OSHE" class="oshe-logo">
     <div class="nav-div"></div>
-    <img src="https://images/harm-logo.png" alt="HARM" class="harm-logo">
+    <img src="images/harm-logo.png" alt="HARM" class="harm-logo">
   </a>
   <ul class="nav-links">
     <li><a href="oshe-features.html">OSHE Software</a></li>
