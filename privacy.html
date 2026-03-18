@@ -17,17 +17,12 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'DM Sans',sans-serif; background:var(--dark); color:var(--white); overflow-x:hidden; }
 
-  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.5rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
   .nav-logo { display:flex; align-items:center; gap:1rem; text-decoration:none; }
   .nav-brand { font-family:'Space Mono',monospace; font-weight:700; font-size:1.1rem; display:flex; align-items:center; gap:0.5rem; }
   .nav-brand .no { color:var(--teal); }
   .nav-brand .nh { color:var(--harm-accent); }
   .nav-brand .ns { color:var(--grey); }
-  .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
-  .nav-links a { color:rgba(245,250,249,0.75); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
-  .nav-links a:hover { color:var(--teal); }
-  .nav-cta { background:var(--teal); color:var(--dark)!important; padding:0.55rem 1.3rem; border-radius:6px; font-weight:700!important; }
-  .nav-cta:hover { background:var(--teal-light)!important; color:var(--dark)!important; }
   .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
   .nav-links a { color:rgba(245,250,249,0.75); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
   .nav-links a:hover { color:var(--teal); }
@@ -57,9 +52,6 @@
 
   @media(max-width:900px) {
     nav { padding:1rem 1.5rem; }
-    .nav-logo img { height:48px; }
-    .nav-logo .harm-logo { height:42px; }
-    .nav-div { height:36px; }
     .nav-links { display:none; }
     .page { padding:7rem 1.5rem 4rem; }
     footer { flex-direction:column; align-items:flex-start; padding:2.5rem 1.5rem; }
