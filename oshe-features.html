@@ -19,11 +19,12 @@
   html { scroll-behavior:smooth; }
   body { font-family:'DM Sans',sans-serif; background:var(--dark); color:var(--white); overflow-x:hidden; }
 
-  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1.5rem 4rem; background:rgba(0,48,43,0.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(0,212,170,0.12); }
   .nav-logo { display:flex; align-items:center; gap:1rem; text-decoration:none; }
-  .nav-logo img { height:32px; width:auto; }
-  .nav-logo .harm-logo { height:28px; filter:invert(55%) sepia(80%) saturate(600%) hue-rotate(340deg) brightness(105%); }
-  .nav-div { width:1px; height:24px; background:rgba(0,212,170,0.25); }
+  .nav-logo img { height:84px; width:auto; }
+  .nav-logo .harm-logo { height:76px; }
+  .nav-logo .oshe-logo { }
+  .nav-div { width:1px; height:56px; background:rgba(0,212,170,0.25); }
   .nav-links { display:flex; align-items:center; gap:2rem; list-style:none; }
   .nav-links a { color:rgba(245,250,249,0.75); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color 0.2s; }
   .nav-links a:hover { color:var(--teal); }
@@ -42,15 +43,24 @@
   .btn-white { background:#fff; color:var(--harm-accent); padding:0.85rem 1.8rem; border-radius:8px; border:none; font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:700; cursor:pointer; text-decoration:none; transition:all 0.2s; display:inline-block; }
   .btn-white:hover { background:#fff0eb; }
 
-  .page-hero { min-height:52vh; display:flex; flex-direction:column; justify-content:center; padding:10rem 4rem 5rem; position:relative; overflow:hidden; }
+  /* HERO WITH IPHONE */
+  .page-hero { min-height:52vh; display:grid; grid-template-columns:1fr auto; align-items:center; gap:4rem; padding:10rem 4rem 5rem; position:relative; overflow:hidden; }
   .page-hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(0,212,170,0.07) 0%,transparent 70%); }
   .page-hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(0,212,170,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,170,0.03) 1px,transparent 1px); background-size:60px 60px; }
-  .page-hero > * { position:relative; z-index:1; }
+  .page-hero-text { position:relative; z-index:1; }
   .ptag { font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.22em; color:var(--teal); text-transform:uppercase; border:1px solid rgba(0,212,170,0.3); padding:0.38rem 1rem; border-radius:2px; margin-bottom:2rem; display:inline-block; animation:fadeUp 0.6s ease both; }
-  .page-hero h1 { font-size:clamp(2.6rem,5.5vw,4.8rem); font-weight:700; line-height:1.06; max-width:800px; animation:fadeUp 0.7s 0.1s ease both; }
+  .page-hero h1 { font-size:clamp(2.6rem,5.5vw,4.8rem); font-weight:700; line-height:1.06; max-width:640px; animation:fadeUp 0.7s 0.1s ease both; }
   .page-hero h1 .accent { color:var(--teal); }
-  .page-hero p { font-size:1.1rem; color:rgba(245,250,249,0.6); max-width:540px; line-height:1.8; font-weight:300; margin-top:1.5rem; animation:fadeUp 0.7s 0.2s ease both; }
+  .page-hero p { font-size:1.1rem; color:rgba(245,250,249,0.6); max-width:520px; line-height:1.8; font-weight:300; margin-top:1.5rem; animation:fadeUp 0.7s 0.2s ease both; }
   .page-hero .acts { margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.3s ease both; }
+
+  /* IPHONE FRAME */
+  .iphone-wrap { position:relative; z-index:1; animation:fadeUp 0.8s 0.4s ease both; flex-shrink:0; }
+  .iphone { width:260px; background:#0a0a0a; border-radius:44px; padding:12px; box-shadow:0 0 0 1px rgba(255,255,255,0.1), 0 30px 80px rgba(0,0,0,0.5), 0 0 40px rgba(0,212,170,0.08); position:relative; }
+  .iphone-notch { width:100px; height:28px; background:#0a0a0a; border-radius:0 0 18px 18px; position:absolute; top:12px; left:50%; transform:translateX(-50%); z-index:2; }
+  .iphone-screen { width:100%; border-radius:34px; overflow:hidden; background:#000; aspect-ratio:9/19.5; position:relative; }
+  .iphone-screen img { width:100%; height:100%; object-fit:cover; object-position:top; }
+  .iphone-btn { width:3px; height:60px; background:rgba(255,255,255,0.15); border-radius:2px; position:absolute; right:-4px; top:120px; }
 
   .feat-block { display:grid; grid-template-columns:280px 1fr; gap:4rem; align-items:start; padding:4rem; border-bottom:1px solid rgba(0,212,170,0.08); }
   .feat-block:last-child { border-bottom:none; }
@@ -121,8 +131,13 @@
 
   @media(max-width:900px) {
     nav { padding:1rem 1.5rem; }
+    .nav-logo img { height:48px; }
+    .nav-logo .harm-logo { height:42px; }
+    .nav-div { height:36px; }
     .nav-links { display:none; }
-    .page-hero, .cta-wrap { padding:5rem 1.5rem 4rem; }
+    .page-hero { grid-template-columns:1fr; padding:7rem 1.5rem 4rem; }
+    .iphone-wrap { display:flex; justify-content:center; }
+    .cta-wrap { padding:5rem 1.5rem 4rem; }
     .feat-block { grid-template-columns:1fr; gap:1.2rem; padding:3rem 1.5rem; }
     .feat-left { position:static; }
     .feat-name { font-size:1.6rem; }
@@ -159,11 +174,12 @@
     </div>
   </div>
 </div>
+
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="https://images/oshe-logo.png" alt="OSHE">
+    <img src="images/oshe-logo.png" alt="OSHE" class="oshe-logo">
     <div class="nav-div"></div>
-    <img src="https://images/harm-logo.png" alt="HARM" class="harm-logo">
+    <img src="images/harm-logo.png" alt="HARM" class="harm-logo">
   </a>
   <ul class="nav-links">
     <li><a href="oshe-features.html">OSHE Software</a></li>
@@ -177,12 +193,23 @@
 <div class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-grid"></div>
-  <div class="ptag">OSHE Software · oshe.co.nz</div>
-  <h1>Every feature your site needs.<br><span class="accent">Built for the people doing the work.</span></h1>
-  <p>Nine core features. One platform. Works on any device and simple enough that your whole team will use it from day one. (There is a lot more under the hood too.)</p>
-  <div class="acts">
-    <a href="book.html" class="btn btn-teal">Start 7-Day Free Trial</a>
-    <a href="pricing.html" class="btn btn-outline">See Pricing</a>
+  <div class="page-hero-text">
+    <div class="ptag">OSHE Software · oshe.co.nz</div>
+    <h1>Every feature your site needs.<br><span class="accent">Built for the people doing the work.</span></h1>
+    <p>Nine core features. One platform. Works on any device and simple enough that your whole team will use it from day one. (There is a lot more under the hood too.)</p>
+    <div class="acts">
+      <a href="book.html" class="btn btn-teal">Start 7-Day Free Trial</a>
+      <a href="pricing.html" class="btn btn-outline">See Pricing</a>
+    </div>
+  </div>
+  <div class="iphone-wrap">
+    <div class="iphone">
+      <div class="iphone-notch"></div>
+      <div class="iphone-screen">
+        <img src="images/app-screenshot.png" alt="OSHE App">
+      </div>
+      <div class="iphone-btn"></div>
+    </div>
   </div>
 </div>
 
