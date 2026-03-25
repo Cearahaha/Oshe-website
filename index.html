@@ -32,6 +32,18 @@
   .nav-cta { background:var(--teal); color:var(--dark)!important; padding:0.55rem 1.3rem; border-radius:6px; font-weight:700!important; }
   .nav-cta:hover { background:var(--teal-light)!important; }
 
+  /* HAMBURGER */
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; background:none; border:none; }
+  .hamburger span { width:24px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s; display:block; }
+  .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+  .hamburger.open span:nth-child(2) { opacity:0; }
+  .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+  .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,48,43,0.98); z-index:99; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:700; transition:color 0.2s; }
+  .mobile-menu a:hover { color:var(--teal); }
+  .mobile-menu .mobile-cta { background:var(--teal); color:var(--dark)!important; padding:0.85rem 2rem; border-radius:8px; }
+
   .btn { display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 1.8rem; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:700; cursor:pointer; text-decoration:none; border:none; transition:all 0.2s; }
   .btn-teal { background:var(--teal); color:var(--dark); }
   .btn-teal:hover { background:var(--teal-light); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,212,170,0.2); }
@@ -56,6 +68,15 @@
   .hero-stats { display:flex; gap:3.5rem; margin-top:4.5rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.4s ease both; }
   .stat h3 { font-family:'Space Mono',monospace; font-size:2rem; color:var(--teal); font-weight:700; }
   .stat p { font-size:0.8rem; color:var(--grey); margin-top:0.2rem; max-width:140px; line-height:1.4; }
+
+  /* IPHONE */
+  .hero-inner { display:grid; grid-template-columns:1fr auto; align-items:center; gap:4rem; }
+  .iphone-wrap { position:relative; z-index:1; flex-shrink:0; }
+  .iphone { width:320px; background:#0a0a0a; border-radius:44px; padding:12px; box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 30px 80px rgba(0,0,0,0.5),0 0 40px rgba(0,212,170,0.08); position:relative; }
+  .iphone-notch { width:100px; height:28px; background:#0a0a0a; border-radius:0 0 18px 18px; position:absolute; top:12px; left:50%; transform:translateX(-50%); z-index:2; }
+  .iphone-screen { width:100%; border-radius:34px; overflow:hidden; background:#000; aspect-ratio:9/19.5; position:relative; }
+  .iphone-screen img { width:100%; height:100%; object-fit:cover; object-position:top; }
+  .iphone-btn { width:3px; height:60px; background:rgba(255,255,255,0.15); border-radius:2px; position:absolute; right:-4px; top:120px; }
 
   .brands { display:grid; grid-template-columns:1fr 1fr; }
   .brand-half { padding:4.5rem 4rem; position:relative; overflow:hidden; }
@@ -142,29 +163,6 @@
   .flinks a:hover { color:var(--teal); }
   .fcopy { font-size:0.74rem; color:rgba(138,168,162,0.45); text-align:right; line-height:1.6; }
 
-  /* HAMBURGER MENU */
-  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; background:none; border:none; }
-  .hamburger span { width:24px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s; display:block; }
-  .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px, 5px); }
-  .hamburger.open span:nth-child(2) { opacity:0; }
-  .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px, -5px); }
-  .mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,48,43,0.98); z-index:99; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
-  .mobile-menu.open { display:flex; }
-  .mobile-menu a { color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:700; transition:color 0.2s; }
-  .mobile-menu a:hover { color:var(--teal); }
-  .mobile-menu .mobile-cta { background:var(--teal); color:var(--dark)!important; padding:0.85rem 2rem; border-radius:8px; }
-
-  .hero-inner { display:grid; grid-template-columns:1fr auto; align-items:center; gap:4rem; }
-  .iphone-wrap { position:relative; z-index:1; flex-shrink:0; }
-  .iphone { width:320px; background:#0a0a0a; border-radius:44px; padding:12px; box-shadow:0 0 0 1px rgba(255,255,255,0.1), 0 30px 80px rgba(0,0,0,0.5), 0 0 40px rgba(0,212,170,0.08); position:relative; }
-  .iphone-notch { width:100px; height:28px; background:#0a0a0a; border-radius:0 0 18px 18px; position:absolute; top:12px; left:50%; transform:translateX(-50%); z-index:2; }
-  .iphone-screen { width:100%; border-radius:34px; overflow:hidden; background:#000; aspect-ratio:9/19.5; position:relative; }
-  .iphone-screen img { width:100%; height:100%; object-fit:cover; object-position:top; }
-  .iphone-btn { width:3px; height:60px; background:rgba(255,255,255,0.15); border-radius:2px; position:absolute; right:-4px; top:120px; }
-  @media(max-width:900px) {
-    .iphone-wrap { display:none !important; }
-    .hero-inner { grid-template-columns:1fr; gap:0; }
-  }
   .overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:200; align-items:center; justify-content:center; padding:1.5rem; backdrop-filter:blur(4px); }
   .overlay.open { display:flex; }
   .popup { background:#001f1a; border:1px solid rgba(0,212,170,0.25); border-radius:18px; padding:2.5rem; width:100%; max-width:480px; position:relative; animation:fadeUp 0.3s ease both; }
@@ -189,13 +187,12 @@
   @keyframes scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
   @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
 
-  @media(max-width:900px) {
+  @media(max-width:1024px) {
     nav { padding:1rem 1.5rem; }
-    .nav-logo img { height:48px; }
-    .nav-logo .harm-logo { height:42px; }
-    .nav-div { height:36px; }
-    .nav-links { display:none; }
-    .hero, .sec, .cta-wrap { padding:5rem 1.5rem 4rem; }
+    .hamburger { display:flex !important; }
+    .nav-links { display:none !important; }
+    .hero { padding:7rem 1.5rem 4rem; }
+    .sec, .cta-wrap { padding:3.5rem 1.5rem; }
     .brands { grid-template-columns:1fr; }
     .brand-half.oshe { border-right:none; border-bottom:1px solid rgba(0,212,170,0.1); }
     .feat-grid { grid-template-columns:1fr; }
@@ -205,6 +202,8 @@
     .cbar, .hbar { flex-direction:column; padding:2.5rem 1.5rem; }
     footer { flex-direction:column; align-items:flex-start; padding:2.5rem 1.5rem; }
     .fcopy { text-align:left; }
+    .iphone-wrap { display:none !important; }
+    .hero-inner { grid-template-columns:1fr; gap:0; }
   }
 </style>
 <!-- Google Analytics -->
@@ -315,7 +314,6 @@
         <div class="stat"><h3 class="count-text">7 days</h3><p>free trial, no credit card</p></div>
       </div>
     </div>
-
     <div class="iphone-wrap">
       <div class="iphone">
         <div class="iphone-notch"></div>
@@ -370,7 +368,6 @@
       <img src="images/logo-5.png.svg" alt="Client" style="height:40px;width:auto;opacity:0.6;filter:grayscale(100%) brightness(2);">
       <img src="images/logo-6.png.webp" alt="Client" style="height:40px;width:auto;opacity:0.6;filter:grayscale(100%) brightness(2);">
       <img src="images/logo-7.png.png" alt="Client" style="height:40px;width:auto;opacity:0.6;filter:grayscale(100%) brightness(2);">
-      <!-- Duplicate for seamless loop -->
       <img src="images/logo-1.png.png" alt="Client" style="height:40px;width:auto;opacity:0.6;filter:grayscale(100%) brightness(2);">
       <img src="images/logo-3.png.png" alt="Client" style="height:40px;width:auto;opacity:0.6;filter:grayscale(100%) brightness(2);">
       <img src="images/logo-4.png.jpg" alt="Client" style="height:40px;width:auto;opacity:0.6;filter:grayscale(100%) brightness(2);">
@@ -493,7 +490,6 @@
       <div class="hc"><h3>H&amp;S Audits and Reviews</h3><p>Independent audits. Clear action plans. Not just a report that sits in a drawer.</p></div>
       <div class="hc"><h3>Policy and Procedure Writing</h3><p>Plain-English policies tailored to your organisation, not copy-pasted templates.</p></div>
       <div class="hc"><h3>General H&amp;S Support</h3><p>Notifiable events, incident investigations, and situations where you need someone who has been there before.</p></div>
-
       <div class="hc" style="border-color:rgba(46,55,254,0.35);background:rgba(46,55,254,0.08);grid-column:1/-1;"><h3>1:1 with Vanessa</h3><p>A focused session with Vanessa Crafts. Bring your challenges. Walk away with a clear plan and honest advice.</p></div>
     </div>
     <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
@@ -556,7 +552,6 @@
     document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
   }
 
-  // Count-up animation
   function runCountUp() {
     document.querySelectorAll('.count').forEach(el => {
       const target = parseInt(el.dataset.target);
