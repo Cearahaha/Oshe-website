@@ -125,7 +125,8 @@
   .form-field input { background:rgba(0,212,170,0.05); border:1px solid rgba(0,212,170,0.18); border-radius:8px; padding:0.72rem 1rem; color:var(--white); font-family:'DM Sans',sans-serif; font-size:0.93rem; outline:none; transition:border-color 0.2s; }
   .form-field input:focus { border-color:rgba(0,212,170,0.5); }
   .form-field input::placeholder { color:rgba(245,250,249,0.25); }
-  .field-required { font-size:0.68rem; color:rgba(245,250,249,0.35); margin-top:0.2rem; } width:100%; padding:0.95rem; background:var(--teal); color:var(--dark); border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; margin-top:0.4rem; transition:background 0.2s; }
+  .field-required { font-size:0.68rem; color:rgba(245,250,249,0.35); margin-top:0.2rem; }
+  .popup-submit { width:100%; padding:0.95rem; background:var(--teal); color:var(--dark); border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; margin-top:0.4rem; transition:background 0.2s; }
   .popup-submit:hover { background:var(--teal-light); }
   .popup-note { font-size:0.75rem; color:rgba(245,250,249,0.3); text-align:center; margin-top:0.8rem; }
   .success-msg { display:none; text-align:center; padding:1rem 0; }
@@ -176,7 +177,6 @@
       <div class="form-field"><label>Phone</label><input type="tel" name="Phone" placeholder="021 000 0000" required><span class="field-required">Required</span></div>
       <div class="form-field"><label>Company Name</label><input type="text" name="Company" placeholder="Your company" required><span class="field-required">Required</span></div>
       <button type="submit" class="popup-submit">Request My Free Trial</button>
-
     </form>
     <div class="success-msg" id="successMsg">
       <h3>You're on the list!</h3>
@@ -234,7 +234,7 @@
         <li>Up to 5 users</li>
         <li>Unlimited forms</li>
       </ul>
-      <a href="book.html" class="pbtn">Start Free Trial</a>
+      <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Demo</a>
     </div>
     <div class="pcard featured">
       <div class="pplan">Elevate</div>
@@ -246,7 +246,7 @@
         <li>Up to 10 users</li>
         <li>Your logo displayed on all forms</li>
       </ul>
-      <a href="book.html" class="pbtn">Start Free Trial</a>
+      <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Demo</a>
     </div>
     <div class="pcard">
       <div class="pplan">Growth</div>
@@ -257,7 +257,7 @@
         <li>All software features</li>
         <li>Up to 20 users</li>
       </ul>
-      <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Call</a>
+      <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Demo</a>
     </div>
   </div>
 
@@ -277,7 +277,7 @@
   </div>
 
   <div class="trial-banner" style="margin-top:1.5rem;">
-    <p><strong>7-day free trial on all plans.</strong> Full access from day one. No credit card required. No lock-in. Fill in the free trial form and we will send you your access within 12 hours.</p>
+    <p><strong>7-day free trial on all plans.</strong> Full access from day one. No credit card required. No lock-in. <a href="#" id="trialBannerLink" style="color:var(--teal);font-weight:600;text-decoration:underline;">Start your free trial</a> and we will send you your access within 12 hours.</p>
   </div>
 </div>
 
@@ -336,7 +336,7 @@
     <h2>Ready to get started?</h2>
     <p>Try OSHE free for 7 days, or book a call with Vanessa to talk through what you need first.</p>
     <div class="cta-acts">
-      <a href="book.html" class="btn btn-teal">Start Free Trial</a>
+      <a href="#" class="btn btn-teal" id="ctaTrialBtn">Start Free Trial</a>
       <a href="https://calendly.com/oshenz" target="_blank" class="btn btn-harm">Book with Vanessa</a>
     </div>
   </div>
@@ -381,12 +381,7 @@
     document.getElementById('mobileMenu').classList.toggle('open');
     document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
   }
-  document.querySelectorAll('a.pbtn, a.btn-teal').forEach(btn => {
-    if (btn.textContent.includes('Trial')) {
-      btn.href = '#';
-      btn.addEventListener('click', e => { e.preventDefault(); openTrialPopup(); });
-    }
-  });
+
   function openTrialPopup() {
     document.getElementById('trialOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -398,6 +393,19 @@
   document.getElementById('trialOverlay').addEventListener('click', function(e) {
     if (e.target === this) closeTrialPopup();
   });
+
+  // Trial banner link opens popup
+  document.getElementById('trialBannerLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    openTrialPopup();
+  });
+
+  // CTA section free trial button opens popup
+  document.getElementById('ctaTrialBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    openTrialPopup();
+  });
+
   const form = document.getElementById('trialForm');
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
