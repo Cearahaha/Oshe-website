@@ -32,7 +32,6 @@
   .nav-cta { background:var(--teal); color:var(--dark)!important; padding:0.55rem 1.3rem; border-radius:6px; font-weight:700!important; }
   .nav-cta:hover { background:var(--teal-light)!important; }
 
-  /* HAMBURGER */
   .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:0.5rem; background:none; border:none; }
   .hamburger span { width:24px; height:2px; background:#ffffff; border-radius:2px; transition:all 0.3s; display:block; }
   .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
@@ -69,7 +68,6 @@
   .stat h3 { font-family:'Space Mono',monospace; font-size:2rem; color:var(--teal); font-weight:700; }
   .stat p { font-size:0.8rem; color:var(--grey); margin-top:0.2rem; max-width:140px; line-height:1.4; }
 
-  /* IPHONE */
   .hero-inner { display:grid; grid-template-columns:1fr auto; align-items:center; gap:4rem; }
   .iphone-wrap { position:relative; z-index:1; flex-shrink:0; }
   .iphone { width:320px; background:#0a0a0a; border-radius:44px; padding:12px; box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 30px 80px rgba(0,0,0,0.5),0 0 40px rgba(0,212,170,0.08); position:relative; }
@@ -177,7 +175,8 @@
   .form-field input { background:rgba(0,212,170,0.05); border:1px solid rgba(0,212,170,0.18); border-radius:8px; padding:0.72rem 1rem; color:var(--white); font-family:'DM Sans',sans-serif; font-size:0.93rem; outline:none; transition:border-color 0.2s; }
   .form-field input:focus { border-color:rgba(0,212,170,0.5); }
   .form-field input::placeholder { color:rgba(245,250,249,0.25); }
-  .field-required { font-size:0.68rem; color:rgba(245,250,249,0.35); margin-top:0.2rem; } width:100%; padding:0.95rem; background:var(--teal); color:var(--dark); border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; margin-top:0.4rem; transition:background 0.2s; }
+  .field-required { font-size:0.68rem; color:rgba(245,250,249,0.35); margin-top:0.2rem; }
+  .popup-submit { width:100%; padding:0.95rem; background:var(--teal); color:var(--dark); border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; margin-top:0.4rem; transition:background 0.2s; }
   .popup-submit:hover { background:var(--teal-light); }
   .popup-note { font-size:0.75rem; color:rgba(245,250,249,0.3); text-align:center; margin-top:0.8rem; }
   .success-msg { display:none; text-align:center; padding:1rem 0; }
@@ -255,7 +254,6 @@
         <span class="field-required">Required</span>
       </div>
       <button type="submit" class="popup-submit">Request My Free Trial</button>
-
     </form>
     <div class="success-msg" id="successMsg">
       <h3>You're on the list!</h3>
@@ -284,7 +282,6 @@
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="oshe-features.html" onclick="toggleMenu()">OSHE Software</a>
   <a href="harm-services.html" onclick="toggleMenu()">HARM Consulting</a>
@@ -293,7 +290,6 @@
   <a href="book.html" class="mobile-cta" onclick="toggleMenu()">Book Now</a>
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -331,7 +327,6 @@
   </div>
 </section>
 
-<!-- TWO BRANDS -->
 <div class="brands" id="how-it-works">
   <div class="brand-half oshe">
     <div class="brand-name">OSHE</div>
@@ -347,7 +342,6 @@
   </div>
 </div>
 
-<!-- OSHE FEATURES OVERVIEW -->
 <div class="sec light" id="features">
   <span class="stag">OSHE Platform</span>
   <h2 class="tt">Everything your site needs.<br>Nothing it doesn't.</h2>
@@ -362,7 +356,6 @@
   </div>
 </div>
 
-<!-- TRUSTED BY -->
 <div style="padding:3rem 0;border-top:1px solid rgba(0,212,170,0.08);border-bottom:1px solid rgba(0,212,170,0.08);">
   <p style="font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--grey);text-align:center;margin-bottom:2rem;">Trusted By</p>
   <div style="overflow:hidden;width:100%;position:relative;">
@@ -383,7 +376,6 @@
   </div>
 </div>
 
-<!-- QR CALLOUT -->
 <div class="cbar">
   <div>
     <h3>No app download needed for site sign-in.</h3>
@@ -392,7 +384,6 @@
   <a href="book.html" class="btn btn-dark">See It in Action</a>
 </div>
 
-<!-- VANESSA -->
 <div class="sec dark2" id="about">
   <div class="v-wrap">
     <div class="photo-box">
@@ -412,7 +403,6 @@
   </div>
 </div>
 
-<!-- PRICING -->
 <div class="sec dark2" id="pricing" style="background:#001a16;">
   <span class="stag">OSHE Pricing</span>
   <h2 class="tt">Simple. Transparent. No surprises.</h2>
@@ -460,7 +450,6 @@
   </div>
 </div>
 
-<!-- OSHE CONSULTING -->
 <div class="sec dark2" id="oshe-consulting" style="background:#001f1a;border-top:1px solid rgba(0,212,170,0.08);">
   <span class="stag">OSHE Consulting</span>
   <h2 class="tt">Need help getting set up?</h2>
@@ -471,7 +460,6 @@
   </div>
 </div>
 
-<!-- FINAL CTA -->
 <div class="cta-wrap">
   <div class="cta-box">
     <span class="stag" style="display:block;text-align:center;margin-bottom:0.5rem;">Ready when you are</span>
@@ -484,7 +472,6 @@
   </div>
 </div>
 
-<!-- HARM SERVICES OVERVIEW -->
 <div class="sec harm-dark" id="harm-services" style="position:relative;overflow:hidden;">
   <div style="position:relative;z-index:1;">
     <span class="stag h">HARM Consulting</span>
@@ -507,7 +494,6 @@
   </div>
 </div>
 
-<!-- HARM CALLOUT -->
 <div class="hbar">
   <div>
     <h3>Not sure where to start? That is what the 1:1 is for.</h3>
@@ -516,7 +502,6 @@
   <a href="https://calendly.com/oshenz" target="_blank" class="btn btn-white">Book with Vanessa</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div>
     <div class="footer-logos">
@@ -532,6 +517,7 @@
     <li><a href="pricing.html">Pricing</a></li>
     <li><a href="team.html">Team</a></li>
     <li><a href="book.html">Book a Demo</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="privacy.html">Privacy Policy</a></li>
   </ul>
   <div style="display:flex;flex-direction:column;gap:0.35rem;">
@@ -544,8 +530,8 @@
     <a href="https://app.harm.co.nz/login" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--harm-accent);color:#fff;padding:0.6rem 1.2rem;border-radius:8px;font-weight:700;font-size:0.82rem;text-decoration:none;">Log in to HARM</a>
   </div>
   <div class="fcopy">
-    © 2026 OSHE and HARM. New Zealand.<br>
-    <span style="opacity:0.5;">oshe.co.nz · harm.co.nz</span>
+    &copy; 2026 OSHE and HARM. New Zealand.<br>
+    <span style="opacity:0.5;">oshe.co.nz &middot; harm.co.nz</span>
   </div>
 </footer>
 
