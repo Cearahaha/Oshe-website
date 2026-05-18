@@ -178,9 +178,6 @@ background:radial-gradient(circle,rgba(141,198,63,.07) 0%,transparent 70%);point
 .howhdr{text-align:center;margin-bottom:72px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1}
 @media(max-width:860px){.steps{grid-template-columns:1fr}}
-.steps::before{content:'';position:absolute;top:42px;left:calc(16.67% + 24px);right:calc(16.67% + 24px);
-height:1px;background:linear-gradient(90deg,var(--oshe),rgba(141,198,63,.5),var(--mag));pointer-events:none}
-@media(max-width:860px){.steps::before{display:none}}
 .step{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:22px;
 padding:34px 26px;display:flex;flex-direction:column;gap:14px;transition:.35s var(--ease);position:relative;overflow:hidden}
 .step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s}
