@@ -229,23 +229,33 @@ font-family:var(--fh);font-size:15px;font-weight:800;color:#fff;flex-shrink:0}
 .tn{font-family:var(--fh);font-size:14px;font-weight:700;color:#fff}
 .tr{font-size:12px;color:var(--dim)}
 
-/* FOUNDER */
+/* FOUNDERS */
 .founder{padding:100px 24px;background:var(--off-white);overflow:hidden}
-.fdin{max-width:960px;margin:0 auto;display:grid;grid-template-columns:240px 1fr;gap:60px;align-items:center}
-@media(max-width:768px){.fdin{grid-template-columns:1fr;text-align:center}.fwrap{margin:0 auto}.fbtns{justify-content:center}}
-.fwrap{position:relative;width:210px}
-.fwrap img{width:100%;border-radius:32px;object-fit:cover;aspect-ratio:3/4}
-.fwrap::after{content:'';position:absolute;inset:-3px;border-radius:35px;
-background:linear-gradient(135deg,var(--oshe) 0%,transparent 55%);z-index:-1;opacity:.4}
-.fq{font-size:17px;line-height:1.7;color:var(--t-muted);font-style:italic;
-margin-bottom:18px;border-left:3px solid var(--oshe);padding-left:18px}
-.fbio{font-size:15px;line-height:1.7;color:var(--t-muted);margin-bottom:24px}
+.fdin-hdr{max-width:1100px;margin:0 auto}
+.fdin-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:860px){.fdin-grid{grid-template-columns:1fr}}
+.fcard{background:#fff;border:1px solid var(--l-border);border-radius:22px;overflow:hidden;
+display:flex;flex-direction:column;transition:.35s var(--ease)}
+.fcard:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.fcard-img-wrap{position:relative;height:260px;overflow:hidden;background:#e8e6e0}
+.fcard-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.fcard-brand-tag{position:absolute;top:16px;left:16px;font-family:var(--fh);font-size:11px;
+font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:50px}
+.fc-o{background:var(--oshe);color:var(--black)}
+.fc-m{background:var(--mag);color:var(--black)}
+.fcard-body{padding:28px 28px 32px;display:flex;flex-direction:column;gap:0;flex:1}
+.fq{font-size:16px;line-height:1.65;color:var(--t-muted);font-style:italic;
+margin-bottom:16px;border-left:3px solid var(--oshe);padding-left:16px}
+.fq-m{border-left-color:var(--mag)}
+.fbio{font-size:14.5px;line-height:1.7;color:var(--t-muted);margin-bottom:20px}
 .fnam{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--t-body)}
-.frol{font-size:13px;color:var(--t-muted);margin-bottom:20px}
-.fbtns{display:flex;gap:12px;flex-wrap:wrap}
-.bf1{background:var(--oshe);color:var(--black);font-family:var(--fh);font-weight:700;font-size:14px;padding:11px 22px;border-radius:50px;display:inline-flex;align-items:center;gap:6px;transition:.3s var(--ease)}
+.frol{font-size:13px;color:var(--t-muted);margin-bottom:20px;margin-top:2px}
+.fbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.bf1{background:var(--oshe);color:var(--black);font-family:var(--fh);font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:50px;display:inline-flex;align-items:center;gap:6px;transition:.3s var(--ease)}
 .bf1:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--oshe-glow)}
-.bf2{background:transparent;color:var(--t-body);font-family:var(--fh);font-weight:700;font-size:14px;padding:11px 22px;border-radius:50px;border:1.5px solid var(--l-border);display:inline-flex;align-items:center;gap:6px;transition:.3s var(--ease)}
+.bf1-m{background:var(--mag)}
+.bf1-m:hover{box-shadow:0 8px 24px var(--mag-glow)}
+.bf2{background:transparent;color:var(--t-body);font-family:var(--fh);font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:50px;border:1.5px solid var(--l-border);display:inline-flex;align-items:center;gap:6px;transition:.3s var(--ease)}
 .bf2:hover{border-color:var(--oshe);color:var(--oshe);transform:translateY(-1px)}
 
 /* ROADMAP */
@@ -448,7 +458,7 @@ border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2);transition:.3s 
         <div class="pc-inc">All features included</div>
       </div>
     </div>
-    <div class="pcode">Use <span class="co">TRADESSTACK</span> for 20% off any plan</div>
+    <div class="pcode">Mention <span class="co">TRADESSTACK</span> when signing up for 20% off</div>
     <ul class="fl">
       <li class="fi"><span class="ft fto">✓</span>QR site sign-in — no app download needed</li>
       <li class="fi"><span class="ft fto">✓</span>Contractor pre-qualification &amp; register</li>
@@ -485,7 +495,7 @@ border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2);transition:.3s 
         <div class="pc-inc">No lock-in, cancel anytime</div>
       </div>
     </div>
-    <div class="pcode" style="color:rgba(255,255,255,.3)">Use <span class="cm">TRADESSTACK</span> for 20% off every user</div>
+    <div class="pcode" style="color:rgba(255,255,255,.3)">Mention <span class="cm">TRADESSTACK</span> when signing up for 20% off</div>
     <ul class="fl">
       <li class="fi"><span class="ft ftm">✓</span>Drag-and-drop job scheduling</li>
       <li class="fi"><span class="ft ftm">✓</span>Quote to invoice in one platform</li>
@@ -519,7 +529,7 @@ border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2);transition:.3s 
       <span class="cval" id="cval">TRADESSTACK</span>
       <span class="chint" id="chint">Click to copy</span>
     </div>
-    <p class="dfine">Apply at checkout on either platform. Valid for new sign-ups and existing customers upgrading.</p>
+    <p class="dfine">Mention TRADESSTACK when signing up on either platform. Valid for new sign-ups and existing customers upgrading.</p>
     <div class="dbtns fu">
       <a href="https://oshe.co.nz/book.html" class="btn btn-o btn-lg">Claim via OSHE</a>
       <a href="https://app.magnetize.co.nz/free-trial" class="btn btn-m btn-lg">Claim via Magnetize</a>
@@ -660,24 +670,52 @@ border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2);transition:.3s 
   </div>
 </section>
 
-<!-- FOUNDER -->
+<!-- FOUNDERS -->
 <section class="founder">
-  <div class="fdin">
-    <div class="fwrap fu">
-      <img src="https://i.imgur.com/IeggFnH.png" alt="Vanessa Crafts" loading="lazy" onerror="this.style.display='none'">
-    </div>
-    <div class="fu" style="transition-delay:.15s">
-      <div class="ey" style="margin-bottom:14px">Behind OSHE</div>
-      <h2 style="font-family:var(--fh);font-weight:900;font-size:clamp(26px,3.2vw,38px);letter-spacing:-.03em;line-height:1.1;color:var(--t-body);margin-bottom:16px">H&S that works for people doing the actual work.</h2>
-      <blockquote class="fq">"I built OSHE because I was sick of watching good businesses get tripped up by systems that were not made for them."</blockquote>
-      <p class="fbio">Vanessa Crafts is co-founder of OSHE and HARM, with over 15 years in H&S across NZ trades, social services, and beyond. Together with co-founder Sophie, 30 years of real-world experience between them.</p>
-      <div class="fnam">Vanessa Crafts</div>
-      <div class="frol">Co-Founder · OSHE &amp; HARM Consulting · Tauranga, NZ</div>
-      <div class="fbtns">
-        <a href="https://calendly.com/oshenz" class="bf1">Book a 1:1 with Vanessa</a>
-        <a href="https://oshe.co.nz/harm-services.html" class="bf2">HARM Consulting →</a>
+  <div class="fdin-hdr fu" style="text-align:center;margin-bottom:52px">
+    <div class="ey" style="justify-content:center">The people behind it</div>
+    <h2 class="h2 h2d">Built by people who've been there.</h2>
+  </div>
+  <div class="fdin-grid">
+
+    <!-- Vanessa -->
+    <div class="fcard fu">
+      <div class="fcard-img-wrap">
+        <img src="https://i.imgur.com/IeggFnH.png" alt="Vanessa Crafts" loading="lazy" onerror="this.closest('.fcard-img-wrap').style.display='none'">
+        <div class="fcard-brand-tag fc-o">OSHE</div>
+      </div>
+      <div class="fcard-body">
+        <div class="ey" style="margin-bottom:10px;font-size:11px">Behind OSHE</div>
+        <blockquote class="fq">"I built OSHE because I was sick of watching good businesses get tripped up by systems that were not made for them."</blockquote>
+        <p class="fbio">Vanessa Crafts has over 15 years in H&S across NZ trades, social services, and beyond. Together with co-founder Sophie, they bring 30 years of real-world experience — and built OSHE to be the platform they always wished existed.</p>
+        <div class="fnam">Vanessa Crafts</div>
+        <div class="frol">Co-Founder · OSHE · Tauranga, NZ</div>
+        <div class="fbtns">
+          <a href="https://calendly.com/oshenz" class="bf1">Book a 1:1 with Vanessa</a>
+          <a href="https://oshe.co.nz" class="bf2">oshe.co.nz →</a>
+        </div>
       </div>
     </div>
+
+    <!-- Scott -->
+    <div class="fcard fu" style="transition-delay:.15s">
+      <div class="fcard-img-wrap">
+        <img src="https://www.magnetize.co.nz/site/file/post/UvYim5Fo/scott.jpg" alt="Scott Sherwin" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.fcard-img-wrap').style.display='none'">
+        <div class="fcard-brand-tag fc-m">Magnetize</div>
+      </div>
+      <div class="fcard-body">
+        <div class="ey mag" style="margin-bottom:10px;font-size:11px">Behind Magnetize</div>
+        <blockquote class="fq fq-m">"We were scaling up chaos — whiteboards, spreadsheets, a bunch of apps. There was nothing in the market that met our standards, so we built it."</blockquote>
+        <p class="fbio">Scott Sherwin built Magnetize out of his own drilling business, PRO DRILL, after 16 years on the tools and a stint running operations. He saw the problem firsthand and built the solution he couldn't find anywhere else.</p>
+        <div class="fnam">Scott Sherwin</div>
+        <div class="frol">Director &amp; Co-Founder · Magnetize · New Zealand</div>
+        <div class="fbtns">
+          <a href="https://app.magnetize.co.nz/free-trial" class="bf1 bf1-m">Start free trial</a>
+          <a href="https://magnetize.co.nz" class="bf2">magnetize.co.nz →</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -690,7 +728,7 @@ border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2);transition:.3s 
       <p style="font-size:16px;color:rgba(255,255,255,.42);margin-top:14px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.65">What's live now, and what we're building together.</p>
     </div>
     <div class="rmg">
-      <div class="rmc fu"><span class="rtag rtn">Now</span><div><div class="rmt">20% off for customers using both</div><div class="rmb">Use TRADESSTACK at checkout on either platform.</div></div></div>
+      <div class="rmc fu"><span class="rtag rtn">Now</span><div><div class="rmt">20% off for customers using both</div><div class="rmb">Mention TRADESSTACK when signing up on either platform.</div></div></div>
       <div class="rmc fu" style="transition-delay:.08s"><span class="rtag rtn">Now</span><div><div class="rmt">In-app cross-promotion</div><div class="rmb">Each platform recommends the other to customers.</div></div></div>
       <div class="rmc fu" style="transition-delay:.16s"><span class="rtag rtn">Now</span><div><div class="rmt">Joint content and case studies</div><div class="rmb">Co-branded social content and shared customer stories.</div></div></div>
       <div class="rmc fu" style="transition-delay:.24s"><span class="rtag rts">Coming</span><div><div class="rmt">API integration</div><div class="rmb">H&S compliance status surfacing inside the Magnetize job view.</div></div></div>
@@ -707,8 +745,8 @@ border:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2);transition:.3s 
       <p style="font-size:16px;color:var(--dim);margin-top:12px">Straight answers to what we hear most.</p>
     </div>
     <div class="faql">
-      <div class="faqi"><button class="faqq" aria-expanded="false">Do I need to sign up to both to get the discount?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">No — TRADESSTACK works on either platform individually. But the real value is running both together, since they cover completely different ground with zero overlap.</div></div></div>
-      <div class="faqi"><button class="faqq" aria-expanded="false">I'm already a customer on one. Does it still apply?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">Yes. Valid for new sign-ups and existing customers upgrading or adding to their plan. Apply at checkout or contact support if you're mid-subscription.</div></div></div>
+      <div class="faqi"><button class="faqq" aria-expanded="false">Do I need to sign up to both to get the discount?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">Yes — the 20% is a discount for using both platforms together. If you're already on one, you get the discount when you add the other. Mention TRADESSTACK when signing up to the second platform and it'll be applied.</div></div></div>
+      <div class="faqi"><button class="faqq" aria-expanded="false">I'm already a customer on one. Does it still apply?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">Yes. Valid for new sign-ups and existing customers upgrading or adding to their plan. Just mention TRADESSTACK when you sign up or contact support if you're mid-subscription.</div></div></div>
       <div class="faqi"><button class="faqq" aria-expanded="false">Do OSHE and Magnetize share my data?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">No. They're fully independent platforms — no data sharing. This is a commercial discount partnership only. The API integration on the roadmap will be opt-in when it arrives.</div></div></div>
       <div class="faqi"><button class="faqq" aria-expanded="false">How long does setup take?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">Most businesses are running on both in a single afternoon. OSHE includes a 1-hour onboarding session. Magnetize provides free 24-hour NZ-based support. No IT project required.</div></div></div>
       <div class="faqi"><button class="faqq" aria-expanded="false">Is OSHE actually Tōtika / SiteWise compliant?<span class="faqic">+</span></button><div class="faqa"><div class="faqai">Yes. Built specifically for Tōtika and SiteWise requirements. HARM Consulting also assists directly with prequalification applications if you need expert hands-on help.</div></div></div>
