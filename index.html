@@ -133,7 +133,7 @@
   .quote { font-size:1.1rem; font-style:italic; color:var(--teal); line-height:1.7; border-left:3px solid var(--teal); padding-left:1.3rem; margin:1.8rem 0; font-weight:300; }
   .body-t { font-size:0.95rem; color:rgba(245,250,249,0.62); line-height:1.85; font-weight:300; }
 
-  .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }
+  .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; max-width:1200px; margin-left:auto; margin-right:auto; }
   .pcard { border:1px solid rgba(0,212,170,0.12); border-radius:14px; padding:2.3rem; background:rgba(0,212,170,0.02); display:flex; flex-direction:column; transition:all 0.25s; position:relative; }
   .pcard:hover { border-color:rgba(0,212,170,0.3); transform:translateY(-4px); }
   .pcard.ft { border-color:var(--teal); background:rgba(0,212,170,0.06); }
@@ -141,6 +141,7 @@
   .pplan { font-family:'Space Mono',monospace; font-size:0.78rem; letter-spacing:0.15em; color:var(--white); text-transform:uppercase; font-weight:700; margin-bottom:0.2rem; }
   .ptagline { font-size:0.8rem; color:rgba(245,250,249,0.4); font-weight:300; margin-bottom:0.8rem; }
   .pamt { font-size:2.8rem; font-weight:700; line-height:1; }
+  .pamt.negotiated { font-size:1.6rem; color:var(--teal); padding-top:0.4rem; }
   .pamt sup { font-size:1rem; font-weight:400; color:var(--grey); vertical-align:top; margin-top:0.6rem; display:inline-block; }
   .pper { font-size:0.8rem; color:var(--grey); margin-top:0.3rem; margin-bottom:1.2rem; }
   .pfeats { list-style:none; flex:1; display:flex; flex-direction:column; gap:0.55rem; margin-bottom:1.8rem; }
@@ -414,41 +415,43 @@
   <h2 class="tt">Simple. Transparent. No surprises.</h2>
   <p class="sub">Start free for 7 days. No credit card. Cancel anytime. HARM consulting is quoted separately.</p>
   <div class="price-grid">
-    <div class="pcard">
+    <div class="pcard ft">
       <div class="pplan">Launch</div>
       <div class="ptagline">Perfect to get started</div>
-      <div class="pamt"><sup>$</sup>58</div>
+      <div class="pamt"><sup>$</sup>179<sup style="font-size:1rem;">+</sup></div>
       <div class="pper">per month + GST</div>
       <ul class="pfeats">
-        <li>1 hour onboarding session</li>
-        <li>Access to all features</li>
-        <li>Up to 5 users</li>
-        <li>Unlimited forms</li>
-      </ul>
-      <a href="book.html" class="pbtn">Start Free Trial</a>
-    </div>
-    <div class="pcard ft">
-      <div class="pplan">Elevate</div>
-      <div class="ptagline">Ready to bring on the whole team?</div>
-      <div class="pamt"><sup>$</sup>110</div>
-      <div class="pper">per month + GST</div>
-      <ul class="pfeats">
-        <li>Everything included from Launch</li>
         <li>Up to 10 users</li>
-        <li>Your logo displayed on all forms</li>
+        <li>Access to all features</li>
+        <li>Customised OHSM policies and procedures</li>
+        <li>Free 1 hour onboarding</li>
+        <li>Quarterly check-ins and ongoing support</li>
       </ul>
       <a href="book.html" class="pbtn">Start Free Trial</a>
     </div>
     <div class="pcard">
       <div class="pplan">Growth</div>
-      <div class="ptagline">Tailored solutions for enterprises</div>
-      <div class="pamt"><sup>$</sup>200</div>
+      <div class="ptagline">For businesses expanding their team and taking on more work</div>
+      <div class="pamt"><sup>$</sup>249<sup style="font-size:1rem;">+</sup></div>
       <div class="pper">per month + GST</div>
       <ul class="pfeats">
-        <li>All software features</li>
         <li>Up to 20 users</li>
+        <li>All software features</li>
+        <li>Everything included from Launch</li>
       </ul>
       <a href="book.html" class="pbtn">Start Free Trial</a>
+    </div>
+    <div class="pcard">
+      <div class="pplan">Enterprise</div>
+      <div class="ptagline">Tailored solutions for larger organisations</div>
+      <div class="pamt negotiated">Price by negotiation</div>
+      <div class="pper">get in touch to discuss</div>
+      <ul class="pfeats">
+        <li>Everything included from all plans</li>
+        <li>Unlimited users</li>
+        <li>Customised to suit your business</li>
+      </ul>
+      <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Talk to Vanessa</a>
     </div>
   </div>
   <div style="text-align:center;margin-top:2rem;">
