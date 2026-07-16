@@ -47,7 +47,7 @@
   .hero p { font-size:1rem; color:rgba(245,250,249,0.55); max-width:480px; margin:1.2rem auto 0; line-height:1.8; font-weight:300; animation:fadeUp 0.7s 0.2s ease both; }
 
   .pricing-section { padding:4rem 4rem 5rem; }
-  .price-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; max-width:1200px; margin:0 auto; }
+  .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1200px; margin:0 auto; }
   .pcard { border:1px solid rgba(0,212,170,0.12); border-radius:14px; padding:2.3rem; background:rgba(0,212,170,0.02); display:flex; flex-direction:column; transition:all 0.25s; position:relative; }
   .pcard:hover { border-color:rgba(0,212,170,0.28); transform:translateY(-4px); }
   .pcard.featured { border-color:var(--teal); background:rgba(0,212,170,0.05); }
@@ -221,39 +221,32 @@
 
 <div class="pricing-section">
   <div class="price-grid">
-    <div class="pcard">
+    <div class="pcard featured">
       <div class="pplan">Launch</div>
       <div class="ptagline">Perfect to get started</div>
-      <div class="pamt"><sup>$</sup>58</div>
+      <div class="pamt"><sup>$</sup>179<sup style="font-size:1rem;">+</sup></div>
       <div class="pper">per month + GST</div>
       <ul class="pfeats">
-        <li>1 hour onboarding session</li>
-        <li>Access to all <a href="oshe-features.html" style="color:var(--teal);text-decoration:underline;">features</a></li>
-        <li>Up to 5 users</li>
-        <li>Unlimited forms</li>
-      </ul>
-      <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Demo</a>
-    </div>
-    <div class="pcard featured">
-      <div class="pplan">Elevate</div>
-      <div class="ptagline">Ready to bring on the whole team?</div>
-      <div class="pamt"><sup>$</sup>110</div>
-      <div class="pper">per month + GST</div>
-      <ul class="pfeats">
-        <li><a href="oshe-features.html" style="color:var(--teal);text-decoration:underline;">Everything</a> included from Launch</li>
         <li>Up to 10 users</li>
-        <li>Your logo displayed on all forms</li>
+        <li>Access to all <a href="oshe-features.html" style="color:var(--teal);text-decoration:underline;">features</a></li>
+        <li>Customised OHSM policies and procedures</li>
+        <li>Free 1 hour onboarding session</li>
+        <li>Quarterly 15 minute check-in</li>
+        <li>Ongoing support and advice</li>
+        <li>Incident investigation remote support</li>
+        <li>Member rates on consulting services &mdash; site reviews, T&#333;tika advisory and more</li>
       </ul>
       <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Demo</a>
     </div>
     <div class="pcard">
       <div class="pplan">Growth</div>
       <div class="ptagline">For businesses expanding their team and taking on more work</div>
-      <div class="pamt"><sup>$</sup>200</div>
+      <div class="pamt"><sup>$</sup>249<sup style="font-size:1rem;">+</sup></div>
       <div class="pper">per month + GST</div>
       <ul class="pfeats">
-        <li>All software <a href="oshe-features.html" style="color:var(--teal);text-decoration:underline;">features</a></li>
         <li>Up to 20 users</li>
+        <li>All software <a href="oshe-features.html" style="color:var(--teal);text-decoration:underline;">features</a></li>
+        <li>Everything included from Launch</li>
       </ul>
       <a href="https://calendly.com/oshenz" target="_blank" class="pbtn">Book a Demo</a>
     </div>
@@ -271,22 +264,7 @@
     </div>
   </div>
 
-  <div style="max-width:1200px;margin:2rem auto 0;">
-    <div style="border:1px solid rgba(46,55,254,0.2);border-radius:14px;padding:2.3rem;background:rgba(46,55,254,0.03);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
-      <div>
-        <div style="font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;color:var(--harm-accent);text-transform:uppercase;margin-bottom:0.4rem;">HARM Add-on</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;">Policy and Procedure Management</h3>
-        <p style="font-size:0.88rem;color:rgba(245,250,249,0.52);line-height:1.7;font-weight:300;max-width:540px;">We will take care of keeping your policies, manuals, and procedures up to date so you do not have to. This is a separate service and does not come included with any OSHE plan.</p>
-      </div>
-      <div style="text-align:right;flex-shrink:0;">
-        <div style="font-size:2.4rem;font-weight:700;"><sup style="font-size:1rem;color:var(--grey);vertical-align:top;margin-top:0.5rem;display:inline-block;">$</sup>49</div>
-        <div style="font-size:0.8rem;color:var(--grey);margin-top:0.2rem;">per month + GST</div>
-        <a href="harm-services.html" class="btn btn-harm" style="margin-top:1rem;display:inline-block;">Find Out More</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="trial-banner" style="margin-top:1.5rem;">
+  <div class="trial-banner" style="margin-top:2rem;">
     <p><strong>7-day free trial on all plans.</strong> Full access from day one. No credit card required. No lock-in. <a href="#" id="trialBannerLink" style="color:var(--teal);font-weight:600;text-decoration:underline;">Start your free trial</a> and we will send you your access within 12 hours.</p>
   </div>
 </div>
